@@ -9,26 +9,24 @@ def get_choice():
 
 def check_choice(player , computer):
     print(f"You chose : {player} , Computer chose : {computer}")
-    if player == computer:
+      if player == computer:
         return "It's a tie!"
-    
-    elif player == "rock":
-        if computer == "scissors":
-            return "Rock smashes scissors! You win!"
-        else:
-            return "Paper covers rock! You lose."
-            
-    elif player == "paper":
-        if computer == "rock":
-            return "Paper covers rock! You win!"
-        else:
-            return "Scissors cuts paper! You lose."
-            
-    elif player == "scissors":
-        if computer == "paper":
-            return "Scissors cuts paper! You win!"
-        else:
-            return "Rock smashes scissors! You lose."
+    wins = {
+        "rock": "scissors",
+        "paper": "rock",
+        "scissors": "paper"
+    }
+
+    messages = {
+        ("rock", "scissors"): "Rock smashes scissors!",
+        ("paper", "rock"): "Paper covers rock!",
+        ("scissors", "paper"): "Scissors cut paper!"
+    }
+
+    if wins[player] == computer:
+        return f"{messages[(player, computer)]} You win!"
+    else:
+        return f"{messages[(computer, player)]} You lose."
 choices= get_choice()
 result= check_choice(choices["Player"],choices["computer"])
 print(result)
