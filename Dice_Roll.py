@@ -12,3 +12,8 @@ while total < target and round_num < rounds:
       round_num += 1
       history.append(roll)
       print(f"Round {round_num }: rolled {roll} , total = {total}")
+if total >= target:
+      print(f"\nYou reached {total} in {round_num} rounds!")
+else:
+      print(f"\nOut of Rounds! Final Score : {total}")
+print(f"Rolls :{history}")
