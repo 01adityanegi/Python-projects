@@ -7,5 +7,8 @@ total = 0
 history = []
 round_num = 0
 while total < target and round_num < rounds:
-      roll = roll_dice
+      roll = roll_dice()
       total += roll
+      round_num += 1
+      history.append(roll)
+      print(f"Round {round_num }: rolled {roll} , total = {total}")
