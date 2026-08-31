@@ -11,4 +11,5 @@ def mad_libs():
     Everyone was suprised, but it turned out
     to be the best idea ever!
     """
-    
+    print("\n Here's your story :\n")
+    print(story)
