@@ -13,3 +13,6 @@ def mad_libs():
     """
     print("\n Here's your story :\n")
     print(story)
+    
+if __name__ == "__main__":
+    mad_libs()
