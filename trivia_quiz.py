@@ -8,3 +8,4 @@ question = {
 def ask_question(question , answer):
     user = input(f"{question}").strip().lower()
     return user == answer
+score = 0
