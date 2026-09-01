@@ -15,3 +15,4 @@ for q, a in questions.items():
         score += 1
     else:
         print(f"Nope! The answer was {a}")
+print(f"\nYour final score: {score}/{len(questions)}")
