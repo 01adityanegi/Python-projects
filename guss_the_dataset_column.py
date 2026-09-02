@@ -16,4 +16,5 @@ while attempts >0:
         print("Not in the word.")
     if all(c in guessed for c in word ):
         print(f"\nYou win! The word was'{word}'")
-        
+else:
+    print(f"\nOut of attempts! The Word was'{word}'")
