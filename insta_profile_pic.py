@@ -7,3 +7,7 @@ targets = ["adityanegi01" , "sujal_uk01_", "filmmakerpriyanshu","kunalrana___"] 
 for username in targets:
     print(f"\n{'='*40}")
     print(f"Scanning :{username}")
+
+    profile = instaloader.Profile.from_username(ig.context, username)
+
+    
